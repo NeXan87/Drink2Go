@@ -15,10 +15,61 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body class="page__body">
-  <header class="header">Шапка</header>
+<body>
+  <div class="main-container">
+    <header class="main-header">
+      <a class="main-header__logo logo" href="/" aria-label="Перейти на главную страницу.">
+        <picture>
+          <source media="(min-width: 1440px)" srcset="img/svg/logo-long.svg">
+          <source media="(min-width: 768px)" srcset="img/svg/logo-short.svg">
+          <img class="logo__image" src="img/svg/logo-icon.svg" alt="Логотип интернет-магазина Drink2Go.">
+        </picture>
+        <span class="main-header__logo-text">Интернет-магазин кофейных напитков</span>
+      </a>
+      <nav class="main-header__navigation">
+        <ul class="main-header__site-list">
+          <li class="main-header__site-item main-header__site-item--current">
+            <a class="main-header__link" href="/">Главная</a>
+          </li>
+          <li class="main-header__site-item">
+            <a class="main-header__link" href="#">Каталог</a>
+          </li>
+          <li class="main-header__site-item">
+            <a class="main-header__link" href="#">Доставка</a>
+          </li>
+          <li class="main-header__site-item">
+            <a class="main-header__link" href="#">О нас</a>
+          </li>
+        </ul>
+        <ul class="main-header__user-list">
+          <li class="main-header__user-item">
+            <a class="main-header__link main-header__link--icon" href="#" aria-label="Войти на сайт по логину и паролю.">
+              <svg class="main-header__svg" width="16" height="16" role="img">
+                <use xlink:href="img/icons/stack.svg#user" />
+              </svg>
+              <span class="main-header__text main-header__text--search" aria-hidden="true">Войти</span>
+            </a>
+          </li>
+          <li class="main-header__user-item">
+            <a class="main-header__link main-header__link--icon" href="#" aria-label="Открыть корзину с товарами.">
+              <svg class="main-header__svg" width="16" height="16" role="img">
+                <use xlink:href="img/icons/stack.svg#basket" />
+              </svg>
+              <span class="main-header__text" aria-hidden="true">Корзина</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <button class="main-header__button" type="button" aria-label="Открыть главное меню.">
+        <span class="main-header__button-line"></span>
+        <span class="main-header__button-line"></span>
+        <span class="main-header__button-line"></span>
+      </button>
+    </header>
+  </div>
 
-  <script src="./js/script.js" defer></script>
+
+  <script src="./js/script.js" type="module"></script>
 </body>
 
 </html>

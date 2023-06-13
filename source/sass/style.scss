@@ -1,9 +1,11 @@
 /* GLOBAL */
 @import "global/variables";
+@import "global/mixins";
 @import "global/utils";
 @import "global/fonts";
 @import "global/reboot";
 @import "global/container";
 
 /* BLOCKS */
-@import "blocks/header";
+@import "blocks/main-header";
+@import "blocks/logo";
