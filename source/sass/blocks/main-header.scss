@@ -4,13 +4,31 @@
   display: flex;
 
   border: 0;
-  border-style: solid;
-  border-color: $color-magnolia;
-  border-bottom-width: 1px;
 
   @include vp-max-768 {
     .no-js & {
       border-bottom-width: 0;
+    }
+  }
+  @include vp-min-1440 {
+    max-width: $vp-1440;
+    margin: 0 auto;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: -100vw;
+    z-index: 1;
+
+    width: 200vw;
+    height: 1px;
+
+    background-color: $color-magnolia;
+
+    @include vp-min-768 {
+      z-index: 0;
     }
   }
 }
@@ -19,6 +37,7 @@
   position: absolute;
   z-index: 1;
 
+  flex-shrink: 0;
   padding: 12px 20px;
 
   @include vp-min-768 {
@@ -89,18 +108,6 @@
 
   transition: transform 0.2s ease-out;
 
-  @include vp-min-768 {
-    position: static;
-
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 0 20px;
-
-    transform: translateY(0);
-
-    transition: transform 0s;
-  }
   @include vp-max-768 {
     .no-js & {
       position: relative;
@@ -109,9 +116,50 @@
       transform: translateY(0);
     }
   }
+  @include vp-min-768 {
+    position: static;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
+    padding: 0 20px 0 7px;
+
+    transform: translateY(0);
+
+    transition: transform 0s;
+  }
+  @include vp-min-1440 {
+    padding-right: 51px;
+  }
 
   .is-open & {
     transform: translateY(0);
+  }
+}
+
+.main-header__site-item {
+  display: flex;
+
+  border: 0;
+  border-style: solid;
+  border-color: $color-magnolia;
+  border-bottom-width: 1px;
+
+  @include vp-min-768 {
+    border-bottom-width: 0;
+  }
+  @include vp-min-1440 {
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+
+  &--current {
+    @include vp-min-768 {
+      border-color: $color-slate-blue;
+      border-bottom-width: 2px;
+    }
   }
 }
 
@@ -130,15 +178,6 @@
 
   background-color: $color-white;
 
-  @include vp-min-768 {
-    flex-shrink: 0;
-    align-items: center;
-    padding-right: 20px;
-    padding-left: 0;
-  }
-  @include vp-min-1440 {
-    padding-right: 40px;
-  }
   @include vp-max-768 {
     .no-js & {
       order: -1;
@@ -150,37 +189,23 @@
       border-bottom-width: 1px;
     }
   }
-}
-
-.main-header__text {
-  display: none;
-
-  @include vp-min-1440 {
-    display: block;
-    margin-left: 8px;
-
-    font-size: 12px;
-    line-height: 16px;
-  }
-}
-
-.main-header__site-item {
-  display: flex;
-
-  border: 0;
-  border-style: solid;
-  border-color: $color-magnolia;
-  border-bottom-width: 1px;
-
   @include vp-min-768 {
-    border-bottom-width: 0;
-  }
+    align-content: flex-start;
+    min-width: 142px;
+    padding-right: 20px;
+    padding-left: 0;
 
-  &--current {
-    @include vp-min-768 {
-      border-color: $color-slate-blue;
-      border-bottom-width: 2px;
-    }
+    background-color: transparent;
+  }
+  @include vp-min-1440 {
+    min-width: 303px;
+    padding-right: 19px;
+  }
+}
+
+.main-header__user-item {
+  @include vp-min-1440 {
+    margin-right: 21px;
   }
 }
 
@@ -193,7 +218,23 @@
   text-decoration: none;
 
   @include vp-min-768 {
-    padding: 32px 20px;
+    padding: 32px 20px 30px 20px;
+
+    &:hover,
+    &:focus,
+    .main-header__site-item--current & {
+      color: $color-slate-blue;
+    }
+  }
+  @include vp-min-1440 {
+    &:hover,
+    &:focus {
+      fill: $color-slate-blue;
+    }
+  }
+
+  &:active {
+    background-color: $color-magnolia;
   }
 
   &--icon {
@@ -203,13 +244,28 @@
     width: 60px;
     height: 60px;
 
+    fill: $color-night-rider;
     @include vp-min-768 {
       height: 80px;
     }
     @include vp-min-1440 {
       width: auto;
       height: auto;
+      padding-bottom: 32px;
     }
+  }
+}
+
+.main-header__text {
+  display: none;
+
+  @include vp-min-1440 {
+    display: block;
+    max-width: 150px;
+    margin-left: 8px;
+
+    font-size: 12px;
+    line-height: 16px;
   }
 }
 
@@ -222,10 +278,16 @@
   height: 60px;
   padding: 0;
 
+  background: none;
+  border: 0;
   cursor: pointer;
 
   @include vp-min-768 {
     display: none;
+  }
+
+  &:active {
+    background-color: $color-magnolia;
   }
 
   .no-js & {
@@ -246,7 +308,7 @@
   bottom: 0;
   left: 0;
 
-  width: 20px;
+  width: 16px;
   height: 2px;
   margin: auto;
 
@@ -261,18 +323,18 @@
   }
 
   &:first-child {
-    transform: translateY(-6px);
+    transform: translateY(-5px);
 
     .is-open & {
-      transform: rotate(-45deg) scaleX(1.3);
+      transform: rotate(-45deg);
     }
   }
 
   &:last-child {
-    transform: translateY(6px);
+    transform: translateY(5px);
 
     .is-open & {
-      transform: rotate(45deg) scaleX(1.3);
+      transform: rotate(45deg);
     }
   }
 }

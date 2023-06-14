@@ -17,8 +17,6 @@ html {
   line-height: $lh-default;
   font-family: $ff-montserrat;
   color: $color-night-rider;
-
-  scrollbar-gutter: stable;
 }
 
 body {
@@ -37,9 +35,4 @@ img {
 
 a {
   text-decoration: none;
-}
-
-button {
-  background: none;
-  border: none;
 }
