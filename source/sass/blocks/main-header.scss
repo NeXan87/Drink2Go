@@ -134,6 +134,7 @@
   @include vp-min-1440 {
     padding-right: 51px;
   }
+
   .is-open & {
     transform: translateY(0);
   }
@@ -234,6 +235,7 @@
       fill: $color-slate-blue;
     }
   }
+
   &:active {
     background-color: $color-magnolia;
   }
@@ -287,6 +289,7 @@
   @include vp-min-768 {
     display: none;
   }
+
   &:active {
     background-color: $color-magnolia;
   }
@@ -316,6 +319,7 @@
   background-color: $color-night-rider;
 
   transition: transform 0.2s;
+
   &:not(:first-child):not(:last-child) {
     .is-open & {
       transform: scaleX(0);

@@ -266,6 +266,7 @@
   @include vp-min-1440 {
     top: 0;
   }
+
   &:hover,
   &:focus {
     background: linear-gradient(90deg, $color-white 0%, transparent 100%);
