@@ -1,11 +1,12 @@
 .main-header {
-  display: flex;
   position: relative;
 
+  display: flex;
+
   border: 0;
-  border-bottom-width: 1px;
   border-style: solid;
   border-color: $color-magnolia;
+  border-bottom-width: 1px;
 
   @include vp-max-768 {
     .no-js & {
@@ -16,19 +17,21 @@
 
 .main-header__logo {
   position: absolute;
-  padding: 12px 20px;
   z-index: 1;
+
+  padding: 12px 20px;
 
   @include vp-min-768 {
     position: relative;
+
     align-self: center;
   }
-
   @include vp-min-1440 {
     display: flex;
-    color: $color-night-rider;
     align-items: center;
     padding-left: 40px;
+
+    color: $color-night-rider;
   }
 }
 
@@ -37,64 +40,72 @@
 
   @include vp-min-1440 {
     display: block;
+    max-width: 150px;
+    margin-left: 20px;
+
     font-size: 12px;
     line-height: 16px;
-    margin-left: 20px;
-    max-width: 150px;
   }
 }
 
 .main-header__navigation {
+  width: 100%;
+  margin-left: auto;
+
   font-weight: 500;
   font-size: 12px;
   line-height: 16px;
-  letter-spacing: 0.02em;
   text-transform: uppercase;
-  margin-left: auto;
-  width: 100%;
+  letter-spacing: 0.02em;
 
   @include vp-min-768 {
     display: flex;
-    margin-left: 0;
-    width: auto;
     flex-grow: 1;
+    width: auto;
+    margin-left: 0;
   }
-
   @include vp-max-768 {
     .no-js & {
-      width: 100%;
       display: flex;
       flex-direction: column;
+      width: 100%;
       margin-left: 0;
     }
   }
 }
 
 .main-header__site-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
   position: absolute;
-  width: 100%;
-  left: 0;
   top: 100%;
+  left: 0;
+
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
   transform: translateY(-100%);
+
   transition: transform 0.2s ease-out;
 
   @include vp-min-768 {
     position: static;
-    transform: translateY(0);
+
     display: flex;
     flex-wrap: wrap;
-    padding: 0 20px;
     justify-content: center;
+    padding: 0 20px;
+
+    transform: translateY(0);
+
     transition: transform 0s;
   }
-
   @include vp-max-768 {
     .no-js & {
       position: relative;
       top: 0;
+
       transform: translateY(0);
     }
   }
@@ -105,36 +116,38 @@
 }
 
 .main-header__user-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+  position: relative;
+
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
-  padding-left: 72px;
+  margin: 0;
+  padding: 0;
   padding-right: 60px;
+  padding-left: 72px;
+
+  list-style: none;
+
   background-color: $color-white;
-  position: relative;
 
   @include vp-min-768 {
-    padding-left: 0;
-    padding-right: 20px;
     flex-shrink: 0;
     align-items: center;
+    padding-right: 20px;
+    padding-left: 0;
   }
-
   @include vp-min-1440 {
     padding-right: 40px;
   }
-
   @include vp-max-768 {
     .no-js & {
       order: -1;
+      padding-right: 0;
+
       border: 0;
-      border-bottom-width: 1px;
       border-style: solid;
       border-color: $color-magnolia;
-      padding-right: 0;
+      border-bottom-width: 1px;
     }
   }
 }
@@ -144,18 +157,20 @@
 
   @include vp-min-1440 {
     display: block;
+    margin-left: 8px;
+
     font-size: 12px;
     line-height: 16px;
-    margin-left: 8px;
   }
 }
 
 .main-header__site-item {
   display: flex;
+
   border: 0;
-  border-bottom-width: 1px;
   border-style: solid;
   border-color: $color-magnolia;
+  border-bottom-width: 1px;
 
   @include vp-min-768 {
     border-bottom-width: 0;
@@ -163,18 +178,19 @@
 
   &--current {
     @include vp-min-768 {
-      border-bottom-width: 2px;
       border-color: $color-slate-blue;
+      border-bottom-width: 2px;
     }
   }
 }
 
 .main-header__link {
-  text-decoration: none;
-  color: $color-night-rider;
-  padding: 20px;
   width: 100%;
+  padding: 20px;
+
   text-align: center;
+  color: $color-night-rider;
+  text-decoration: none;
 
   @include vp-min-768 {
     padding: 32px 20px;
@@ -182,15 +198,14 @@
 
   &--icon {
     display: flex;
+    justify-content: center;
     align-items: center;
     width: 60px;
     height: 60px;
-    justify-content: center;
 
     @include vp-min-768 {
       height: 80px;
     }
-
     @include vp-min-1440 {
       width: auto;
       height: auto;
@@ -199,14 +214,19 @@
 }
 
 .main-header__button {
-  position: relative;
+  position: absolute;
+  top: 0;
+  right: 0;
+
   width: 60px;
   height: 60px;
   padding: 0;
+
   cursor: pointer;
-  position: absolute;
-  right: 0;
-  top: 0;
+
+  @include vp-min-768 {
+    display: none;
+  }
 
   .no-js & {
     display: none;
@@ -216,10 +236,6 @@
     opacity: 0.3;
 
     pointer-events: none;
-  }
-
-  @include vp-min-768 {
-    display: none;
   }
 }
 
