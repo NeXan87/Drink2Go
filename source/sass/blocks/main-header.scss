@@ -7,7 +7,7 @@
   border-style: solid;
   border-color: $color-magnolia;
 
-  @include vp-768-max {
+  @include vp-max-768 {
     .no-js & {
       border-bottom-width: 0;
     }
@@ -19,12 +19,12 @@
   padding: 12px 20px;
   z-index: 1;
 
-  @include vp-768 {
+  @include vp-min-768 {
     position: relative;
     align-self: center;
   }
 
-  @include vp-1440 {
+  @include vp-min-1440 {
     display: flex;
     color: $color-night-rider;
     align-items: center;
@@ -35,7 +35,7 @@
 .main-header__logo-text {
   display: none;
 
-  @include vp-1440 {
+  @include vp-min-1440 {
     display: block;
     font-size: 12px;
     line-height: 16px;
@@ -53,14 +53,14 @@
   margin-left: auto;
   width: 100%;
 
-  @include vp-768 {
+  @include vp-min-768 {
     display: flex;
     margin-left: 0;
     width: auto;
     flex-grow: 1;
   }
 
-  @include vp-768-max {
+  @include vp-max-768 {
     .no-js & {
       width: 100%;
       display: flex;
@@ -81,7 +81,7 @@
   transform: translateY(-100%);
   transition: transform 0.2s ease-out;
 
-  @include vp-768 {
+  @include vp-min-768 {
     position: static;
     transform: translateY(0);
     display: flex;
@@ -91,7 +91,7 @@
     transition: transform 0s;
   }
 
-  @include vp-768-max {
+  @include vp-max-768 {
     .no-js & {
       position: relative;
       top: 0;
@@ -116,18 +116,18 @@
   background-color: $color-white;
   position: relative;
 
-  @include vp-768 {
+  @include vp-min-768 {
     padding-left: 0;
     padding-right: 20px;
     flex-shrink: 0;
     align-items: center;
   }
 
-  @include vp-1440 {
+  @include vp-min-1440 {
     padding-right: 40px;
   }
 
-  @include vp-768-max {
+  @include vp-max-768 {
     .no-js & {
       order: -1;
       border: 0;
@@ -142,7 +142,7 @@
 .main-header__text {
   display: none;
 
-  @include vp-1440 {
+  @include vp-min-1440 {
     display: block;
     font-size: 12px;
     line-height: 16px;
@@ -157,12 +157,12 @@
   border-style: solid;
   border-color: $color-magnolia;
 
-  @include vp-768 {
+  @include vp-min-768 {
     border-bottom-width: 0;
   }
 
   &--current {
-    @include vp-768 {
+    @include vp-min-768 {
       border-bottom-width: 2px;
       border-color: $color-slate-blue;
     }
@@ -176,7 +176,7 @@
   width: 100%;
   text-align: center;
 
-  @include vp-768 {
+  @include vp-min-768 {
     padding: 32px 20px;
   }
 
@@ -187,11 +187,11 @@
     height: 60px;
     justify-content: center;
 
-    @include vp-768 {
+    @include vp-min-768 {
       height: 80px;
     }
 
-    @include vp-1440 {
+    @include vp-min-1440 {
       width: auto;
       height: auto;
     }
@@ -218,7 +218,7 @@
     pointer-events: none;
   }
 
-  @media (min-width: $vp-768) {
+  @include vp-min-768 {
     display: none;
   }
 }

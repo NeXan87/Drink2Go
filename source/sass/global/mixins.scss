@@ -1,16 +1,16 @@
-@mixin vp-768-max {
+@mixin vp-max-768 {
   @media (max-width: calc($vp-768 - 1px)) {
     @content;
   }
 }
 
-@mixin vp-768 {
+@mixin vp-min-768 {
   @media (min-width: $vp-768) {
     @content;
   }
 }
 
-@mixin vp-1440 {
+@mixin vp-min-1440 {
   @media (min-width: $vp-1440) {
     @content;
   }
