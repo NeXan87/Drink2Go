@@ -242,19 +242,6 @@
   }
 }
 
-.swiper__buttons-wrapper {
-  @include vp-min-1440 {
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-
-    width: $vp-1440;
-    height: 100%;
-    margin: auto;
-  }
-}
-
 .swiper__button {
   position: absolute;
   top: 0;
@@ -279,7 +266,6 @@
   @include vp-min-1440 {
     top: 0;
   }
-
   &:hover,
   &:focus {
     background: linear-gradient(90deg, $color-white 0%, transparent 100%);
