@@ -1,0 +1,148 @@
+.advantages {
+  padding: 50px 20px 60px 20px;
+
+  @include vp-min-768 {
+    padding-bottom: 100px;
+  }
+  @include vp-min-1440 {
+    max-width: $vp-1440;
+    margin: 0 auto;
+    padding: 100px 40px 96px 40px;
+  }
+}
+
+.advantages__promo {
+  margin: 0;
+  margin-bottom: 4px;
+
+  text-align: center;
+}
+
+.advantages__title {
+  margin: 0;
+  margin-bottom: 36px;
+
+  text-align: center;
+
+  @include vp-min-768 {
+    margin-bottom: 60px;
+  }
+  @include vp-min-1440 {
+    margin-bottom: 80px;
+  }
+}
+
+.advantages__list {
+  display: grid;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  row-gap: 32px;
+  grid-template-columns: 1fr;
+  @include vp-min-768 {
+    column-gap: 11px;
+
+    justify-items: center;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 50px;
+  }
+  @include vp-min-1440 {
+    gap: 30px;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.advantages__item {
+  padding-top: 66px;
+
+  background-repeat: no-repeat;
+  background-position: center top;
+
+  @include vp-min-768 {
+    max-width: 500px;
+    padding-top: 0;
+    padding-left: 82px;
+  }
+  @include vp-min-1440 {
+    max-width: inherit;
+    padding-top: 77px;
+    padding-left: 0;
+  }
+
+  &:nth-child(1) {
+    background-image: url("../../img/svg/watch.svg");
+
+    @include vp-min-768 {
+      background-position: 11px 4px;
+    }
+    @include vp-min-1440 {
+      background-position: center top;
+    }
+  }
+
+  &:nth-child(2) {
+    background-image: url("../../img/svg/pocket.svg");
+
+    @include vp-min-768 {
+      background-position: 9px 0;
+    }
+    @include vp-min-1440 {
+      background-position: center top;
+    }
+  }
+
+  &:nth-child(3) {
+    background-image: url("../../img/svg/energy.svg");
+
+    @include vp-min-768 {
+      background-position: 15px 0;
+    }
+    @include vp-min-1440 {
+      background-position: center top;
+    }
+  }
+
+  &:nth-child(4) {
+    background-image: url("../../img/svg/leaf.svg");
+
+    @include vp-min-768 {
+      background-position: 12px 4px;
+    }
+    @include vp-min-1440 {
+      background-position: center top;
+    }
+  }
+}
+
+.advantages__subtitle {
+  margin: 0;
+  margin-bottom: 4px;
+
+  text-align: center;
+
+  @include vp-min-768 {
+    margin-bottom: 10px;
+
+    text-align: left;
+  }
+  @include vp-min-1440 {
+    text-align: center;
+  }
+}
+
+.advantages__text {
+  margin: 0;
+
+  text-align: center;
+
+  @include vp-min-768 {
+    font-size: 16px;
+    line-height: 24px;
+    text-align: left;
+  }
+  @include vp-min-1440 {
+    text-align: center;
+  }
+}
