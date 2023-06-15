@@ -4,12 +4,12 @@
   padding: 50px 20px 60px 20px;
 
   @include vp-min-768 {
-    max-width: inherit;
+    max-width: 1024px;
     padding-bottom: 100px;
   }
   @include vp-min-1440 {
     max-width: $vp-1440;
-    padding: 100px 40px 96px 40px;
+    padding: 100px 40px 119px 40px;
   }
 }
 
