@@ -15,6 +15,25 @@ const createSlider = () => {
       'min': 0,
       'max': 1000
     },
+    cssPrefix: '',
+    cssClasses: {
+      target: "range",
+      base: "range__base",
+      origin: "range__origin",
+      handle: "range__handle",
+      horizontal: "range--horizontal",
+      textDirectionLtr: "range--txt-dir-ltr",
+      handleLower: "range__handle--lower",
+      ltr: "range--ltr",
+      handleUpper: "range__handle--upper",
+      touchArea: "range__touch-area",
+      connect: "range__connect",
+      connects: "range__connects",
+      drag: "range--state-drag",
+      tap: "state-tap",
+      active: "range__handle--active",
+      tooltip: "tooltip",
+    },
     format: {
       to: function (value) {
         if (Number.isInteger(value)) {
