@@ -3,6 +3,7 @@ import Swiper from './swiper-bundle.js';
 const initSwiperActions = () => {
   const swiper = new Swiper('.swiper', {
     loop: true,
+    grabCursor: true,
 
     pagination: {
       el: '.swiper__pagination',
@@ -17,12 +18,16 @@ const initSwiperActions = () => {
       prevEl: '.swiper__button--prev',
     },
 
+    wrapperClass: 'swiper__wrapper',
+    slideClass: 'swiper__slide',
+    slideActiveClass: 'swiper__slide--active',
+    slideNextClass: 'swiper__slide--next',
+    slidePrevClass: 'swiper__slide--prev',
+
     autoplay: {
       delay: 5000,
       disableOnInteraction: true,
     },
-
-    grabCursor: true,
   });
 }
 
