@@ -197,14 +197,15 @@
                   </button>
                 </div>
               </div>
+              <div id="slider"></div>
               <div class="catalog__price-wrapper">
                 <label class="catalog__price catalog__price--min">
                   <span class="visually-hidden">Минимальная стоимость.</span>
-                  <input class="catalog__field field" type="number" name="min-price" value="0" min="0" placeholder="0">
+                  <input class="catalog__field field field--min" type="number" name="min-price" value="0" min="0" placeholder="0">
                 </label>
                 <label class="catalog__price catalog__price--max">
                   <span class="visually-hidden">Максимальная стоимость.</span>
-                  <input class="catalog__field field" type="number" name="max-price" value="900" min="0">
+                  <input class="catalog__field field field--max" type="number" name="max-price" value="900" min="0">
                 </label>
               </div>
             </div>
@@ -283,7 +284,7 @@
             </div>
             <div class="catalog__buttons">
               <button class="catalog__button button button--primary" type="submit">Применить</button>
-              <button class="catalog__button button button--secondary" type="reset">Сбросить</button>
+              <button class="catalog__button button button--secondary button--reset" type="reset">Сбросить</button>
             </div>
           </form>
           <div class="catalog__result">
@@ -301,6 +302,7 @@
           </div>
         </div>
       </section>
+
     </main>
 
   </div>

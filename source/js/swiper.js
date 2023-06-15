@@ -1,4 +1,4 @@
-import Swiper from './swiper-bundle.js';
+import Swiper from './vendor/swiper-bundle.js';
 
 const initSwiperActions = () => {
   const swiper = new Swiper('.swiper', {
