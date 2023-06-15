@@ -134,9 +134,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: 500px;
+  margin: 0 auto;
 
   @include vp-min-768 {
     order: -1;
+    max-width: inherit;
+    margin: inherit;
   }
   @include vp-min-1440 {
     align-items: flex-start;

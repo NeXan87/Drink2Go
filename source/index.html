@@ -180,6 +180,70 @@
           </li>
         </ul>
       </section>
+      <section class="catalog">
+        <div class="catalog__wrapper">
+          <p class="catalog__promo promo">Каталог</p>
+          <h2 class="catalog__title title">Каталог кофейных напитков</h2>
+          <form class="catalog__form" action="https://echo.htmlacademy.ru/" method="get">
+            <div class="catalog__range">
+              <p class="catalog__legend">Цена</p>
+              <div class="catalog__range-scale">
+                <div class="catalog__range-bar">
+                  <button class="catalog__range-toggle catalog__range-toggle--min button" type="button">
+                    <span class="visually-hidden">Выбрать минимальную стоимость.</span>
+                  </button>
+                  <button class="catalog__range-toggle catalog__range-toggle--max button" type="button">
+                    <span class="visually-hidden">Выбрать максимальную стоимость.</span>
+                  </button>
+                </div>
+              </div>
+              <div class="catalog__price-wrapper">
+                <label class="catalog__price catalog__price--min">
+                  <span class="visually-hidden">Минимальная стоимость.</span>
+                  <input class="catalog__field field" type="number" name="min-price" value="0" min="0" placeholder="0">
+                </label>
+                <label class="catalog__price catalog__price--max">
+                  <span class="visually-hidden">Максимальная стоимость.</span>
+                  <input class="catalog__field field" type="number" name="max-price" value="900" min="0">
+                </label>
+              </div>
+            </div>
+            <div class="catalog__input-wrapper">
+              <p class="catalog__legend">Наличие молока</p>
+              <ul class="catalog__list">
+                <li class="catalog__item">
+                  <label class="radio">
+                    <input class="radio__input visually-hidden" type="radio" name="milk" value="no-matter" checked>
+                    <span class="catalog__dot radio__dot"></span>
+                    <span class="radio__label-text">Неважно</span>
+                  </label>
+                </li>
+                <li class="catalog__item">
+                  <label class="radio">
+                    <input class="radio__input visually-hidden" type="radio" name="milk" value="only-animal">
+                    <span class="catalog__dot radio__dot"></span>
+                    <span class="radio__label-text">Только животное</span>
+                  </label>
+                </li>
+                <li class="catalog__item">
+                  <label class="radio">
+                    <input class="radio__input visually-hidden" type="radio" name="milk" value="only-vegetable">
+                    <span class="catalog__dot radio__dot"></span>
+                    <span class="radio__label-text">Только растительное</span>
+                  </label>
+                </li>
+                <li class="catalog__item">
+                  <label class="catalog__label radio">
+                    <input class="radio__input visually-hidden" type="radio" name="milk" value="without-milk" disabled>
+                    <span class="catalog__dot radio__dot"></span>
+                    <span class="radio__label-text">Без молока</span>
+                  </label>
+                </li>
+              </ul>
+            </div>
+          </form>
+        </div>
+      </section>
     </main>
 
   </div>
