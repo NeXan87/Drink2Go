@@ -1,11 +1,13 @@
 import { removeClassNoJs } from './remove-class-no-js.js';
 import { initButtonMenuActions } from './mobile-menu.js';
 import { undoDefaultActions } from './undo-default-actions.js';
-import { initSwiperActions } from './swiper.js';
+import { activateSwiper } from './swiper.js';
 import { activateNoUiSlider } from './filter.js';
+import { activateLeaflet } from './map.js';
 
 removeClassNoJs();
 undoDefaultActions();
 initButtonMenuActions();
-initSwiperActions();
+activateSwiper();
 activateNoUiSlider();
+activateLeaflet();

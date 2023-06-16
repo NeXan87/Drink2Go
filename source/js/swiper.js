@@ -1,6 +1,6 @@
 import Swiper from './vendor/swiper-bundle.js';
 
-const initSwiperActions = () => {
+const activateSwiper = () => {
   const swiper = new Swiper('.swiper', {
     loop: true,
     grabCursor: true,
@@ -31,4 +31,4 @@ const initSwiperActions = () => {
   });
 }
 
-export { initSwiperActions };
+export { activateSwiper };

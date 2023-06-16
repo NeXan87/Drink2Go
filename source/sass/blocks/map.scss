@@ -2,6 +2,21 @@
   background-color: $color-white-smoke;
 }
 
+.map__wrapper {
+  height: 420px;
+
+  @include vp-min-768 {
+    height: 480px;
+  }
+  @include vp-min-1440 {
+    height: 540px;
+  }
+
+  .no-js & {
+    display: none;
+  }
+}
+
 .map__features {
   display: none;
 
