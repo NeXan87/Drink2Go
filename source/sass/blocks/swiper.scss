@@ -295,12 +295,7 @@
   cursor: pointer;
 
   @include vp-min-768 {
-    top: -24%;
-
     width: 80px;
-  }
-  @include vp-min-1440 {
-    top: 0;
   }
 
   &:hover,
@@ -330,5 +325,16 @@
     right: 0;
 
     transform: scale(-1, 1);
+  }
+}
+
+.swiper__svg {
+  position: relative;
+
+  @include vp-min-768 {
+    top: -100px;
+  }
+  @include vp-min-1440 {
+    top: 0;
   }
 }

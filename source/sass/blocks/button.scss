@@ -13,6 +13,8 @@
   border-radius: 4px;
   cursor: pointer;
 
+  transition: 0.2s;
+
   &:hover,
   &:focus {
     background-color: $color-medium-purple;
@@ -48,6 +50,20 @@
       color: $color-white;
 
       background-color: $color-gainsboro;
+    }
+  }
+
+  &--basket {
+    &::before {
+      content: "";
+
+      flex-shrink: 0;
+      width: 20px;
+      height: 16px;
+      margin-right: 6px;
+
+      background-image: url("../../img/svg/basket-add.svg");
+      background-repeat: no-repeat;
     }
   }
 }

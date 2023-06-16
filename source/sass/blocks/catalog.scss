@@ -65,7 +65,9 @@
     justify-items: center;
   }
   @include vp-min-1440 {
+    align-items: start;
     width: 318px;
+    height: fit-content;
     margin-top: 4px;
 
     row-gap: 30px;
@@ -219,7 +221,7 @@
 .catalog__sort {
   width: fit-content;
   margin: 0 auto;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 
   @include vp-min-768 {
     margin: 0 0 26px auto;
@@ -241,4 +243,118 @@
 
 .catalog__select {
   width: 165px;
+}
+
+.catalog__products {
+  display: grid;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  grid-template-columns: 1fr;
+  row-gap: 20px;
+  @include vp-min-768 {
+    column-gap: 30px;
+
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 30px;
+  }
+  @include vp-min-1440 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.catalog__product {
+  padding: 40px 20px 20px 20px;
+
+  background-color: $color-white;
+  border-radius: 4px;
+
+  transition: box-shadow 0.2s;
+
+  @include vp-min-768 {
+    padding: 50px 30px 30px 30px;
+  }
+
+  &:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.catalog__product-link {
+  display: block;
+
+  color: $color-night-rider;
+
+  grid-column: 1 / -1;
+
+  &:hover {
+    color: $color-medium-purple;
+  }
+
+  &:active {
+    color: $color-royal-purple;
+  }
+}
+
+.catalog__product-image {
+  display: block;
+  width: auto;
+  margin: 0 auto;
+  margin-bottom: 24px;
+
+  @include vp-min-768 {
+    margin-bottom: 30px;
+  }
+}
+
+.catalog__product-info {
+  display: grid;
+
+  column-gap: 30px;
+
+  grid-template-columns: auto 1fr;
+}
+
+.catalog__product-subtitle {
+  margin: 0;
+  margin-bottom: 4px;
+
+  @include vp-min-768 {
+    margin-bottom: 10px;
+  }
+}
+
+.catalog__product-desc {
+  margin: 0;
+  margin-bottom: 16px;
+
+  grid-column: 1 / -1;
+  @include vp-min-768 {
+    margin-bottom: 20px;
+  }
+}
+
+.catalog__product-price {
+  align-self: center;
+  margin: 0;
+
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 32px;
+  word-break: break-all;
+
+  grid-column-start: 1;
+}
+
+.catalog__product-button {
+  align-self: center;
+  width: fit-content;
+
+  font-size: 14px;
+  line-height: 20px;
+
+  justify-self: end;
+  grid-column-end: -1;
 }
