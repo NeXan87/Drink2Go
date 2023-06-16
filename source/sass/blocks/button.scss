@@ -66,4 +66,11 @@
       background-repeat: no-repeat;
     }
   }
+
+  &--divider {
+    font-weight: 600;
+    color: $color-night-rider;
+
+    pointer-events: none;
+  }
 }
