@@ -266,13 +266,18 @@
 }
 
 .catalog__product {
+  display: grid;
   padding: 40px 20px 20px 20px;
+
+  column-gap: 30px;
 
   background-color: $color-white;
   border-radius: 4px;
 
   transition: box-shadow 0.2s;
 
+  grid-auto-rows: auto auto 1fr auto;
+  grid-template-columns: auto 1fr;
   @include vp-min-768 {
     padding: 50px 30px 30px 30px;
   }
@@ -307,14 +312,6 @@
   @include vp-min-768 {
     margin-bottom: 30px;
   }
-}
-
-.catalog__product-info {
-  display: grid;
-
-  column-gap: 30px;
-
-  grid-template-columns: auto 1fr;
 }
 
 .catalog__product-subtitle {
