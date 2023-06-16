@@ -1,0 +1,32 @@
+.map {
+  background-color: $color-white-smoke;
+}
+
+.map__features {
+  display: none;
+
+  .no-js & {
+    display: block;
+    width: 320px;
+    margin: 0 auto;
+
+    @include vp-min-768 {
+      width: $vp-768;
+    }
+    @include vp-min-1440 {
+      width: $vp-1440;
+    }
+  }
+}
+
+.map__image {
+  display: block;
+  width: 320px;
+
+  @include vp-min-768 {
+    width: $vp-768;
+  }
+  @include vp-min-1440 {
+    width: $vp-1440;
+  }
+}
