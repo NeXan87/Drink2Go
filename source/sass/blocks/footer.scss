@@ -1,12 +1,14 @@
 .footer {
+  margin: 0 auto;
+
   @include vp-min-768 {
-    padding: 39px 20px 40px 20px;
+    max-width: 1024px;
+    padding: 39px 20px 30px 20px;
   }
   @include vp-min-1440 {
     display: grid;
     max-width: $vp-1440;
-    margin: 0 auto;
-    padding: 39px 40px 40px 40px;
+    padding: 39px 40px 30px 40px;
 
     column-gap: 62px;
 
@@ -30,7 +32,10 @@
   }
   @include vp-min-1440 {
     flex-direction: column;
+    justify-content: flex-start;
     align-items: flex-start;
+    max-width: 300px;
+    margin-bottom: 10px;
   }
 }
 
@@ -84,6 +89,7 @@
 .footer__menu {
   @include vp-min-768 {
     display: grid;
+    margin-bottom: 28px;
 
     column-gap: 30px;
 
@@ -91,6 +97,7 @@
   }
   @include vp-min-1440 {
     margin-top: 10px;
+    margin-bottom: 10px;
   }
 }
 
@@ -187,4 +194,47 @@
 .footer__menu-address {
   font-style: normal;
   text-transform: none;
+}
+
+.footer-academy-wrapper {
+  padding: 10px 20px 20px 20px;
+
+  @include vp-min-768 {
+    padding: 0;
+  }
+  @include vp-min-1440 {
+    margin-top: 7px;
+
+    grid-column: 1 / -1;
+    justify-self: center;
+  }
+}
+
+.footer__academy {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  margin: 0 auto;
+  padding: 10px;
+
+  font-size: 12px;
+  line-height: 16px;
+  color: $color-silver;
+
+  &:hover,
+  &:focus {
+    color: $color-slate-blue;
+  }
+
+  &:active {
+    color: $color-royal-purple;
+  }
+}
+
+.footer__academy-text {
+  margin-right: 4px;
+}
+
+.footer__academy-svg {
+  flex-shrink: 0;
 }
