@@ -189,6 +189,15 @@
 
 .footer__menu-link {
   color: $color-night-rider;
+
+  &:hover,
+  &:focus {
+    color: $color-slate-blue;
+  }
+
+  &:active {
+    color: $color-royal-purple;
+  }
 }
 
 .footer__menu-address {

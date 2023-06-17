@@ -116,12 +116,15 @@
 
 .swiper__image {
   width: 280px;
+  height: 280px;
 
   @include vp-min-768 {
     width: 476px;
+    height: 476px;
   }
   @include vp-min-1440 {
     width: 600px;
+    height: 600px;
   }
 }
 
@@ -296,6 +299,10 @@
 
   @include vp-min-768 {
     width: 80px;
+  }
+
+  .no-js & {
+    display: none;
   }
 
   &:hover,

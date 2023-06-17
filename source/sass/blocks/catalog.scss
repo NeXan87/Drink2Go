@@ -89,11 +89,14 @@
   margin-bottom: 30px;
 
   @include vp-min-768 {
+    width: calc(100% - 20px);
     max-width: 300px;
-    margin-right: 20px;
     margin-bottom: 0;
+
+    justify-self: start;
   }
   @include vp-min-1440 {
+    width: 100%;
     max-width: inherit;
     margin-right: 0;
   }
@@ -239,6 +242,10 @@
   font-weight: 600;
   font-size: 16px;
   line-height: 24px;
+
+  @include vp-min-1440 {
+    margin-right: 12px;
+  }
 }
 
 .catalog__select {
@@ -312,6 +319,7 @@
 .catalog__product-image {
   display: block;
   width: auto;
+  height: 188px;
   margin: 0 auto;
   margin-bottom: 24px;
 
