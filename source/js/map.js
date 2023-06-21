@@ -15,7 +15,7 @@ const activateLeaflet = () => {
     scrollWheelZoom: false,
   };
   const customIcon = L.icon({
-    iconUrl: '../img/svg/map-marker.svg',
+    iconUrl: './img/svg/map-marker.svg',
     iconSize: [38, 50],
     iconAnchor: [19, 50],
     popupAnchor: [0, -50],
