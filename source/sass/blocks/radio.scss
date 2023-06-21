@@ -6,6 +6,16 @@
 }
 
 .radio__input {
+  &:checked {
+    + .radio__dot {
+      border-color: $color-slate-blue;
+    }
+
+    + .radio__dot::before {
+      background-color: $color-slate-blue;
+    }
+  }
+
   &:hover,
   &:focus {
     + .radio__dot {
@@ -14,16 +24,6 @@
 
     + .radio__dot::before {
       background-color: $color-slate-blue-opacity;
-    }
-  }
-
-  &:checked {
-    + .radio__dot {
-      border-color: $color-slate-blue;
-    }
-
-    + .radio__dot::before {
-      background-color: $color-slate-blue;
     }
   }
 

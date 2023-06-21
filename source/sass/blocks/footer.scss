@@ -84,6 +84,10 @@
   &:focus {
     color: $color-slate-blue;
   }
+
+  &:active {
+    color: $color-royal-purple;
+  }
 }
 
 .footer__menu {

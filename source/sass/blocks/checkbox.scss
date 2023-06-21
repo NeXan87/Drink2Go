@@ -6,14 +6,6 @@
 }
 
 .checkbox__input {
-  &:hover,
-  &:focus {
-    + .checkbox__dot {
-      background-color: $color-slate-blue-opacity;
-      border-color: $color-medium-purple;
-    }
-  }
-
   &:checked {
     + .checkbox__dot {
       background-color: $color-slate-blue;
@@ -22,6 +14,14 @@
 
     + .checkbox__dot::before {
       transform: translateX(calc(100% - 2px));
+    }
+  }
+
+  &:hover,
+  &:focus {
+    + .checkbox__dot {
+      background-color: $color-slate-blue-opacity;
+      border-color: $color-medium-purple;
     }
   }
 
