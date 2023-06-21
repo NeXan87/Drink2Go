@@ -1,0 +1,1 @@
+function onEmptyLinksClick(n){n.preventDefault()}const undoDefaultActions=()=>{const n=document.querySelectorAll('a[href="#"]');n&&n.forEach((n=>n.addEventListener("click",onEmptyLinksClick)))};export{undoDefaultActions};
